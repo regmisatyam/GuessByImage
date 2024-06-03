@@ -94,6 +94,10 @@ public class Shop extends BaseActivity {
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
+                loadBombAd();
+                loadSkipAd();
+                loadShuffleAd();
+                loadCoinAd();
             }
         });
 
