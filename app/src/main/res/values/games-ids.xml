@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+  <!--app_id-->
+  <string name="app_id" translatable="false">644877227223</string>
+  <!--package_name-->
+  <string name="package_name" translatable="false">com.satyambyte.quizgpt</string>
+  <!--leaderboard coins and levels-->
+  <string name="leaderboard_coins_and_levels" translatable="false">CgkI16m2reISEAIQAQ</string>
+</resources>

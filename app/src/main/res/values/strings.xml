@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Guess By Image</string>
+    <string name="game_services_project_id" translatable="false">644877227223</string>
+    <string name="banner_ads_home" translatable="false">ca-app-pub-4972856716609696/7719523592</string>
+    <string name="banner_ads_middle" translatable="false">ca-app-pub-4972856716609696/2555112238</string>
+    <string name="banner_ads_shop" translatable="false">ca-app-pub-4972856716609696/6089148663</string>
+    <string name="bomb_reward" translatable="false">ca-app-pub-4972856716609696/4262181233</string>
+    <string name="skip_reward" translatable="false">ca-app-pub-4972856716609696/4597223155</string>
+    <string name="shuffle_reward" translatable="false">ca-app-pub-4972856716609696/4014769222</string>
+    <string name="ad_gift" translatable="false">ca-app-pub-4972856716609696/8935923412</string>
+    <string name="coins_100" translatable="false">ca-app-pub-4972856716609696/3128777552</string>
+    <string name="loading_ads">Loading Ads…</string>
+    <string name="accept_terms">Enjoy the \'Guess by Image\' for free! Enhance your gameplay by watching ads to speed up and earn valuable hints and coins. Your acceptance of our terms and privacy policy is confirmed by clicking \'OK.\' Dive into the fun with confidence!</string>
+    <string name="watch_ad">Watch Ads</string>
+    <string name="lvl_1">#1</string>
+    <string name="coins">0</string>
+    <string name="play">PLAY</string>
+    <string name="more_games">MORE GAMES</string>
+    <string name="useful_items">USEFUL ITEMS</string>
+    <string name="free_rewards">FREE REWARDS</string>
+    <string name="ad_gift_txt">Ad Gift</string>
+    <string name="free_gift_txt">FREE GIFT</string>
+    <string name="shop_txt">SHOP</string>
+    <string name="error_messages">ERROR MESSAGES</string>
+    <string name="settings_txt">SETTINGS</string>
+    <string name="language_txt">English</string>
+    <string name="prev_arrow" translatable="false"><![CDATA[<]]></string>
+    <string name="next_arrow" translatable="false"><![CDATA[>]]></string>
+    <string name="claimed">CLAIMED</string>
+    <string name="chest_progress_format">%1$d / 5</string>
+
+</resources>

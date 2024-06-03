@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playGameActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playgame_bg3"
+    tools:context=".PlaygameActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/toolbar">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/round_home_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addCoinCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/home"
+                android:clickable="true"
+                android:foreground="@drawable/effect_top_cardview"
+                app:cardBackgroundColor="#522C2C2C"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toEndOf="@+id/home"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/circularImageCoin"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/coin" />
+
+                <TextView
+                    android:id="@+id/coinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="33dp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="0"
+                    android:textColor="#F3FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/addCoin"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/add_64" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/giftBox"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/gift"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/cardViewHintImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewToolBar"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="@string/watch_ad"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/giftBox"
+        app:layout_constraintStart_toStartOf="@+id/giftBox"
+        app:layout_constraintTop_toBottomOf="@+id/giftBox" />
+
+    <ImageView
+        android:id="@+id/levelBg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/level_bg_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewToolBar" />
+
+    <TextView
+        android:id="@+id/levelTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="@+id/levelBg"
+        app:layout_constraintEnd_toEndOf="@+id/levelBg"
+        app:layout_constraintStart_toStartOf="@+id/levelBg"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewToolBar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/plusFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/amaranth"
+        android:text=""
+        android:textSize="40sp"
+        android:textColor="@color/coin_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toEndOf="@+id/levelBg"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewToolBar"
+        android:visibility="visible"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHintImage"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelBg">
+
+        <RelativeLayout
+            android:id="@+id/imgRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_view_box">
+
+            <ImageView
+                android:id="@+id/hintImage"
+                android:padding="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/randomWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amaranth"
+        android:background="@color/white"
+        android:textSize="32sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHintImage"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/keyboard_cardview"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/keyboard1" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backspaceButton"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="72dp"
+        android:background="#00FFFFFF"
+        android:clickable="true"
+        android:onClick="onBackspaceClick"
+        android:src="@drawable/outline_backspace_32"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard1"
+        app:layout_constraintEnd_toEndOf="@+id/randomWords"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/cardViewHintImage" />
+
+    <LinearLayout
+        android:id="@+id/keyboard1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomWords">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewE"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:text=""
+                android:gravity="center"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyboard1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewJ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewK"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/textViewL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/effect_keyboard_layout"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:textSize="30sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/backspaceImg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="25dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/shuffle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backspaceImg"
+            android:layout_alignStart="@+id/backspaceImg"
+            android:layout_alignEnd="@+id/backspaceImg"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/backspaceImg"
+            app:layout_constraintStart_toStartOf="@+id/backspaceImg">
+
+            <TextView
+                android:id="@+id/shuffleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center|center_horizontal"
+                android:text="5"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/hintImg"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/backspaceImg"
+            android:background="#00FFFFFF"
+            android:src="@drawable/skip_it43" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hintImg"
+            android:layout_alignStart="@+id/hintImg"
+            android:layout_alignEnd="@+id/hintImg"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/hintImg"
+            app:layout_constraintStart_toStartOf="@+id/hintImg">
+
+            <TextView
+                android:id="@+id/skipView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center|center_horizontal"
+                android:text="5"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bombImg"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/hintImg"
+            android:background="#00FFFFFF"
+            android:src="@drawable/bomb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/bombImg"
+            android:layout_alignStart="@+id/bombImg"
+            android:layout_alignEnd="@+id/bombImg"
+            app:layout_constraintEnd_toEndOf="@+id/bombImg"
+            app:layout_constraintStart_toStartOf="@+id/bombImg">
+
+            <TextView
+                android:id="@id/bombView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center|center_horizontal"
+                android:text="5"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <VideoView
+        android:id="@+id/bomb_blast_video"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/keyboard1"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    app:layout_constraintCircleRadius="20dp"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/back_ui"
+    >
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:textSize="30sp"
+        android:fontFamily="@font/baloo"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="#FFE500"
+        android:lineSpacingExtra="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/accept_terms"
+        android:textColor="@color/white"
+        android:fontFamily="@font/amaranth"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+
+    <ImageButton
+        android:id="@+id/closePopupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:background="@drawable/ui_btn_ok"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

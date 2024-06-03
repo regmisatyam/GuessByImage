@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198511963042",
+    "project_id": "guessbyimage",
+    "storage_bucket": "guessbyimage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198511963042:android:f36dffd75d91e1c7aaa0fb",
+        "android_client_info": {
+          "package_name": "com.satyambyte.quizgpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI4BO_No2daA4Ulon4k8_NuH9nhRB6yhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

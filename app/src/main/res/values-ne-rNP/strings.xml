@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guess By Image</string>
+    <string name="watch_ad">विज्ञापन हेर्नुहोस्</string>
+    <string name="loading_ads">विज्ञापनहरू लोड गर्दै…</string>
+    <string name="accept_terms">नि: शुल्क \'Guess By Image\' को मजा लिनुहोस्! गति बढाउन र मूल्यवान संकेतहरू र सिक्काहरू कमाउन विज्ञापनहरू हेरेर आफ्नो गेमप्ले बढाउनुहोस्। हाम्रो सर्तहरू र गोपनीयता नीतिको तपाईंको स्वीकृति \'OK\' क्लिक गरेर पुष्टि हुन्छ। आत्मविश्वासका साथ रमाईलोमा डुब्नुहोस्!</string>
+    <string name="lvl_1">#1</string>
+    <string name="coins">0</string>
+    <string name="play">"खेल्नुहोस "</string>
+    <string name="more_games">"अरु गेमहरु "</string>
+    <string name="useful_items">उपयोज्ञ वस्तुहरू</string>
+    <string name="free_rewards">"नि: शुल्क पाइने वस्तु "</string>
+    <string name="ad_gift_txt">विज्ञापन उपहार</string>
+    <string name="free_gift_txt">सित्तैको उपहार</string>
+    <string name="shop_txt">पसल</string>
+    <string name="error_messages">ERR</string>
+    <string name="settings_txt">सेटिङहरू</string>
+    <string name="language_txt">नेपाली</string>
+    <string name="claimed">CLAIMED</string>
+    <string name="chest_progress_format">%1$d / 5</string>
+</resources>

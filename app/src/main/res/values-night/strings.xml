@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="claimed">CLAIMED</string>
+    <string name="chest_progress_format">%1$d / 5</string>
+</resources>
